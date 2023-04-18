@@ -1,0 +1,65 @@
+Drop table customer Drop database customer create database enrico create table customer(
+Firstname varchar(50) not null, Lastname varchar(50) not null, Address varchar(50) not null, City varchar(50) not null, Country varchar(50) not null, Birthdate varchar(50) not null
+)
+describe customer
+alter table customer add age varchar(2) not null
+alter table customer add(email char(30), telephone char(20)) alter table customer modify address varchar(100)
+alter table customer change addr address char(50) alter table customer drop telephone
+alter table customer add index IDX_Country(Country) alter table customer add index IDX_Lastname(Lastname)
+alter table customer add constraint con_first primary key(Firstname) alter table customer add constraint con_first unique(Lastname)
+
+alter table customer add,modify, change, drop, add index, add constraint(primary key, unique)
+update Studeninfo set MI='R' where StudeNo='101'
+ 	-
+update Studeninfo set MI='R'
+ 	-
+update Studeninfo set Age=Age+1
+
+
+update Studeninfo set Age=Age+2 where age<=22
+
+update Studeninfo set course =’Bs Human Services’ where Address = ‘morong, rizal’ or Address = ‘tanay, rizal’
+
+update Studeninfo set course =’Bs Biology’ where Address = ‘morong, rizal’ and age>=22
+
+
+update Studeninfo set MI=’D’, Gender=’Male’, course =’Bs Human Services’ where age <> 22 and Address <> ‘tanay, rizal’
+ 
+delete from StudeNo where StudeNo=’101’ delete from StudeNo where Age<=21
+delete from StudeNo where Address =’tanay, rizal’ or Address =’taytay, rizal’ or Address =’cainta, rizal’
+
+
+< - less than
+> - greater than
+Asc = small to high
+Desc = high to small
+	
+select * from practice_prac
+
+select mname from practice_prac
+
+select fname, lname, mname, sex, address from practice_prac
+
+select * from practice_prac where address = 'morong, rizal'	
+
+select * from practice_prac where age >20	
+
+select * from practice_prac where age <=20 and address ='morong, rizal'	
+
+select * from practice_prac where age between 19 and 39
+
+select distinct address from practice_prac
+
+select * from practice_prac where address in ( 'morong, rizal', 'taytay, rizal')
+
+select * from practice_prac order by lname asc
+
+select * from practice_prac order by lname desc
+
+select * from practice_prac order by lname desc, mname asc
+
+select * from practice_prac where address in ('morong, rizal', 'taytay, rizal') order by age 
+
+desc, sex asc
+	 
+
